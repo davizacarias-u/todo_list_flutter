@@ -14,7 +14,7 @@ class LoginPage extends StatefulWidget {
 
     
 }
-
+//vai tuma no cu
 class _LoginPageState extends State<LoginPage> {
     final AppStorage _appStorage = AppStorage();
     final TextEditingController _usernameController = TextEditingController();
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
         final textTheme = Theme.of(context).textTheme;
 
         return Scaffold(
-            body: SafeArea(child: Center(child: SingleChildScrollView(padding: const EdgeInsets.all(24),child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 400), child: Column(children: [Icon(Icons.check_circle_outline,size: 72,color: colorScheme.primary,), const SizedBox(height: 16),Text('Minhas Tarefas', style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),],),),),),),
+            body: SafeArea(child: Center(child: SingleChildScrollView(padding: const EdgeInsets.all(24),child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 400), child: Column(children: [Icon(Icons.check_circle_outline,size: 72,color: colorScheme.primary,), const SizedBox(height: 16),Text('Minhas Tarefas', style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)), const SizedBox(height: 8), Text('Organize seu dia', style: textTheme.bodyLarge?.copyWith(color: colorScheme.onSurfaceVariant,),), const SizedBox(height: 40,), TextField(controller: _usernameController, textInputAction: TextInputAction.next, decoration: InputDecoration(labelText: 'Usuário', hintText: 'aluno', border: OutlineInputBorder(borderRadius: BorderRadius.circular(12),),),), const SizedBox(height: 16), TextField(controller: _passwordController, obscureText: true, textInputAction: TextInputAction.done, onSubmitted: (_) => _login(), decoration: InputDecoration(labelText: 'Senha', border: OutlineInputBorder(borderRadius: BorderRadius.circular(12),),),), const SizedBox(height: 24), SizedBox(width: double.infinity, height: 52, child: FilledButton(onPressed: _login, child: const Text('Entrar'),),),],),),),),),
         );
     }
 
